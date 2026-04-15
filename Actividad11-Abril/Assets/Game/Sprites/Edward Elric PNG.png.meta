@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: 2297dcc3afa2ef341a166a5dfd4a0b21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7169430435601647311
+    second: Edward Elric PNG_0
+  - first:
+      213: 1303894111914052077
+    second: Edward Elric PNG_1
+  - first:
+      213: 5132690081257683410
+    second: Edward Elric PNG_2
+  - first:
+      213: -778402406580926556
+    second: Edward Elric PNG_3
+  - first:
+      213: -3135846612075857557
+    second: Edward Elric PNG_4
+  - first:
+      213: 1637302679301022796
+    second: Edward Elric PNG_5
+  - first:
+      213: 7201586321191430496
+    second: Edward Elric PNG_6
+  - first:
+      213: 8273937679047522404
+    second: Edward Elric PNG_7
+  - first:
+      213: 6507340259961653293
+    second: Edward Elric PNG_8
+  - first:
+      213: 4830798730257690478
+    second: Edward Elric PNG_9
+  - first:
+      213: 3336040916127894295
+    second: Edward Elric PNG_10
+  - first:
+      213: -2318558983858070171
+    second: Edward Elric PNG_11
+  - first:
+      213: -6953613006194910956
+    second: Edward Elric PNG_12
+  - first:
+      213: -5547354469747228441
+    second: Edward Elric PNG_13
+  - first:
+      213: 4564955570053529809
+    second: Edward Elric PNG_14
+  - first:
+      213: -610978573563094446
+    second: Edward Elric PNG_15
+  - first:
+      213: 5184428434165980822
+    second: Edward Elric PNG_16
+  - first:
+      213: -764137074596912655
+    second: Edward Elric PNG_17
+  - first:
+      213: -1032176710658017031
+    second: Edward Elric PNG_18
+  - first:
+      213: 5326794124531749539
+    second: Edward Elric PNG_19
+  - first:
+      213: -3347062581546222589
+    second: Edward Elric PNG_20
+  - first:
+      213: 542340757855209130
+    second: Edward Elric PNG_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Edward Elric PNG_0
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1412
+        width: 75
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139f61c0101118c90800000000000000
+      internalID: -7169430435601647311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1412
+        width: 72
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de94c5559cc581210800000000000000
+      internalID: 1303894111914052077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1412
+        width: 73
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9f88b4f6afa3740800000000000000
+      internalID: 5132690081257683410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_3
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1411
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a74f67a22f8235f0800000000000000
+      internalID: -778402406580926556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_4
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1412
+        width: 60
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b693b19ee1c3b74d0800000000000000
+      internalID: -3135846612075857557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_5
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 1412
+        width: 70
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44688dac1ed8b610800000000000000
+      internalID: 1637302679301022796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_6
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1412
+        width: 52
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0696ded7a9c21f360800000000000000
+      internalID: 7201586321191430496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_7
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1412
+        width: 58
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468f85d5b7ee2d270800000000000000
+      internalID: 8273937679047522404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_8
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1412
+        width: 64
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28cc933d77be4a50800000000000000
+      internalID: 6507340259961653293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1269
+        width: 95
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fea6ab9d17a0340800000000000000
+      internalID: 4830798730257690478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1270
+        width: 111
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71bc8f1c98ffb4e20800000000000000
+      internalID: 3336040916127894295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_11
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1269
+        width: 122
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d595073e2d2dfd0800000000000000
+      internalID: -2318558983858070171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_12
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1269
+        width: 92
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419573c00ddcf7f90800000000000000
+      internalID: -6953613006194910956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_13
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1270
+        width: 126
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e08a8b3086d303b0800000000000000
+      internalID: -5547354469747228441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_14
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1269
+        width: 116
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d04b70a7eaf95f30800000000000000
+      internalID: 4564955570053529809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 481
+        width: 83
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a9565793e5587f0800000000000000
+      internalID: -610978573563094446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_16
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 481
+        width: 84
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ed5ed413ac2f740800000000000000
+      internalID: 5184428434165980822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_17
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 481
+        width: 81
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1e1f4116d3565f0800000000000000
+      internalID: -764137074596912655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_18
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 499
+        width: 98
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f83cc710c8fca1f0800000000000000
+      internalID: -1032176710658017031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_19
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 483
+        width: 95
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a25a50a8039ce940800000000000000
+      internalID: 5326794124531749539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_20
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 481
+        width: 98
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c7fe9c058dc81d0800000000000000
+      internalID: -3347062581546222589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_21
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 480
+        width: 113
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa60d2bbb08c68700800000000000000
+      internalID: 542340757855209130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward Elric PNG_22
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 499
+        width: 88
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e35588320bfe8b49b2b908f9aabb5db
+      internalID: -608248753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7b6b5c22177d10448bd74235ff42e0f1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Edward Elric PNG_0: -7169430435601647311
+      Edward Elric PNG_1: 1303894111914052077
+      Edward Elric PNG_10: 3336040916127894295
+      Edward Elric PNG_11: -2318558983858070171
+      Edward Elric PNG_12: -6953613006194910956
+      Edward Elric PNG_13: -5547354469747228441
+      Edward Elric PNG_14: 4564955570053529809
+      Edward Elric PNG_15: -610978573563094446
+      Edward Elric PNG_16: 5184428434165980822
+      Edward Elric PNG_17: -764137074596912655
+      Edward Elric PNG_18: -1032176710658017031
+      Edward Elric PNG_19: 5326794124531749539
+      Edward Elric PNG_2: 5132690081257683410
+      Edward Elric PNG_20: -3347062581546222589
+      Edward Elric PNG_21: 542340757855209130
+      Edward Elric PNG_22: -608248753
+      Edward Elric PNG_3: -778402406580926556
+      Edward Elric PNG_4: -3135846612075857557
+      Edward Elric PNG_5: 1637302679301022796
+      Edward Elric PNG_6: 7201586321191430496
+      Edward Elric PNG_7: 8273937679047522404
+      Edward Elric PNG_8: 6507340259961653293
+      Edward Elric PNG_9: 4830798730257690478
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
