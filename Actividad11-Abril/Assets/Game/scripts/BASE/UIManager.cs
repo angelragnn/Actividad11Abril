@@ -21,9 +21,12 @@ public class UIManager : MonoBehaviour
     public int minimoIngredientesParaAvanzar = 3;
     public GameObject botonIrLaboratorio;
 
+    // --- NUEVA VARIABLE AQUÍ ---
+    [Header("Menú Principal")]
+    public GameObject panelInstrucciones;
+
     void Update()
     {
-        // Actualizar conteo en escena de recolección
         if (textoConteoIngredientes != null)
         {
             int total = GameManager.Instance.TotalIngredientes();
@@ -33,7 +36,6 @@ public class UIManager : MonoBehaviour
                 botonIrLaboratorio.SetActive(total >= minimoIngredientesParaAvanzar);
         }
 
-        // Actualizar inventario en laboratorio
         if (textoInventario != null)
             textoInventario.text = ObtenerTextoInventario();
     }
@@ -88,12 +90,22 @@ public class UIManager : MonoBehaviour
         if (panelVictoria != null) panelVictoria.SetActive(true);
     }
 
+    // --- NUEVO MÉTODO AQUÍ ---
+    public void MostrarInstrucciones()
+    {
+        if (panelInstrucciones != null)
+            panelInstrucciones.SetActive(!panelInstrucciones.activeSelf);
+    }
+
     // Botones de navegación
-    public void IrAlLaboratorio() => SceneManager.LoadScene("Laboratorio");
+    public void IrAlLaboratorio() => SceneManager.LoadScene("LAB-Scene3");
+
     public void IrAlMenu()
     {
         GameManager.Instance.ResetearJuego();
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MENU-Scene1");
     }
-    public void IrARecoleccion() => SceneManager.LoadScene("Bosque");
+
+    public void IrARecoleccion() => SceneManager.LoadScene("BOSQUE-Scene2");
+    public void Salir() => Application.Quit();
 }
