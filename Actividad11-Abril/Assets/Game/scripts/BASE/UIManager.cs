@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI textoMensaje;
     public TextMeshProUGUI textoConteoIngredientes;
     public int minimoIngredientesParaAvanzar = 3;
-    public GameObject botonIrLaboratorio;
 
     [Header("HUD - Laboratorio")]
     public TextMeshProUGUI textoInventario;
@@ -25,16 +24,11 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         if (GameManager.Instance == null) return;
-
         if (textoConteoIngredientes != null)
         {
             int total = GameManager.Instance.TotalIngredientes();
             textoConteoIngredientes.text = $"Ingredientes: {total}";
-
-            if (botonIrLaboratorio != null)
-                botonIrLaboratorio.SetActive(total >= minimoIngredientesParaAvanzar);
         }
-
         if (textoInventario != null)
             textoInventario.text = ObtenerTextoInventario();
     }
@@ -99,14 +93,8 @@ public class UIManager : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
-    }
-
-    public void IrAlLaboratorio()
-    {
-        Debug.Log("[UIManager] Yendo al laboratorio...");
-        SceneManager.LoadScene(2);
     }
 
     public void IrARecoleccion()
