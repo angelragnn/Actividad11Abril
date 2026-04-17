@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,19 +7,32 @@ public class ItemSpawner : MonoBehaviour
     [Header("Prefab genérico de ingrediente")]
     public GameObject ingredientePrefab;
 
-    [Header("Sprites para cada iconoId (mismo orden que el JSON)")]
-    public List<Sprite> sprites; // Asigna en Inspector: hongo, raiz, polvo, escama
+    [Header("Sprites (mismo orden que iconoId en el JSON)")]
+    public List<Sprite> sprites;
 
-    [Header("Puntos de spawn en el mapa")]
+    [Header("Puntos donde aparecerán los ingredientes")]
     public List<Transform> puntosDeSpawn;
 
     void Start()
     {
-        if (GameManager.Instance.datos == null)
+        StartCoroutine(EsperarDatosYSpawnear());
+    }
+
+    IEnumerator EsperarDatosYSpawnear()
+    {
+        float timeout = 5f;
+        float elapsed = 0f;
+        while (GameManager.Instance.datos == null)
         {
-            Debug.LogWarning("[Spawner] Datos aún no cargados.");
-            return;
+            elapsed += Time.deltaTime;
+            if (elapsed > timeout)
+            {
+                Debug.LogError("[Spawner] Timeout: datos del JSON no cargaron.");
+                yield break;
+            }
+            yield return null;
         }
+
         SpawnearIngredientes();
     }
 
@@ -27,34 +41,40 @@ public class ItemSpawner : MonoBehaviour
         var ingredientes = GameManager.Instance.datos.ingredientes;
         int cantidad = Mathf.Min(ingredientes.Count, puntosDeSpawn.Count);
 
-        // Mezclar puntos de spawn aleatoriamente
         List<Transform> puntosAleatorios = new List<Transform>(puntosDeSpawn);
         for (int i = 0; i < puntosAleatorios.Count; i++)
         {
             int j = Random.Range(i, puntosAleatorios.Count);
-            (puntosAleatorios[i], puntosAleatorios[j]) = (puntosAleatorios[j], puntosAleatorios[i]);
+            (puntosAleatorios[i], puntosAleatorios[j]) =
+            (puntosAleatorios[j], puntosAleatorios[i]);
         }
 
         for (int i = 0; i < cantidad; i++)
         {
             IngredienteData data = ingredientes[i];
-            Sprite sprite = ObtenerSprite(data.iconoId);
+            Sprite sprite = ObtenerSprite(data.iconoId, i);
 
-            GameObject obj = Instantiate(ingredientePrefab, puntosAleatorios[i].position, Quaternion.identity);
-            obj.GetComponent<ItemRecolectable>().Inicializar(data.nombre, data.valor, sprite);
+            GameObject obj = Instantiate(
+                ingredientePrefab,
+                puntosAleatorios[i].position,
+                Quaternion.identity
+            );
+
+            obj.GetComponent<ItemRecolectable>()
+               .Inicializar(data.nombre, data.valor, sprite);
         }
+
+        Debug.Log($"[Spawner] Se generaron {cantidad} ingredientes.");
     }
 
-    Sprite ObtenerSprite(string iconoId)
+   
+    Sprite ObtenerSprite(string iconoId, int indice)
     {
-        // Intentar cargar desde Resources primero
         Sprite s = Resources.Load<Sprite>("Sprites/" + iconoId);
         if (s != null) return s;
 
-        // Fallback: buscar en la lista asignada en el Inspector por índice
-        var ingredientes = GameManager.Instance.datos.ingredientes;
-        int idx = ingredientes.FindIndex(x => x.iconoId == iconoId);
-        if (idx >= 0 && idx < sprites.Count) return sprites[idx];
+        if (indice >= 0 && indice < sprites.Count && sprites[indice] != null)
+            return sprites[indice];
 
         Debug.LogWarning($"[Spawner] Sprite no encontrado para: {iconoId}");
         return null;

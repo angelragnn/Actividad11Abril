@@ -7,16 +7,15 @@ public class GameDataLoader : MonoBehaviour
 {
     void Start()
     {
-        // Solo carga si el GameManager aún no tiene datos
         if (GameManager.Instance.datos == null)
             StartCoroutine(CargarDatos());
     }
 
     IEnumerator CargarDatos()
     {
-        string path = Path.Combine(Application.streamingAssetsPath, "datos.json");
+        // ⚠ CORRECCIÓN: el archivo se llama "GameData.json", no "datos.json"
+        string path = Path.Combine(Application.streamingAssetsPath, "GameData.json");
 
-        // UnityWebRequest funciona en todas las plataformas (incluye Android)
         UnityWebRequest request = UnityWebRequest.Get(path);
         yield return request.SendWebRequest();
 
@@ -24,7 +23,8 @@ public class GameDataLoader : MonoBehaviour
         {
             GameData data = JsonUtility.FromJson<GameData>(request.downloadHandler.text);
             GameManager.Instance.SetDatos(data);
-            Debug.Log($"[DataLoader] Cargados {data.ingredientes.Count} ingredientes y {data.recetas.Count} recetas.");
+            Debug.Log($"[DataLoader] OK: {data.ingredientes.Count} ingredientes, " +
+                      $"{data.recetas.Count} recetas.");
         }
         else
         {

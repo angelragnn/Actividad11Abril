@@ -7,26 +7,25 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("HUD General")]
+    [Header("HUD - Escena Recolección")]
     public TextMeshProUGUI textoMensaje;
-    public TextMeshProUGUI textoInventario;
-
-    [Header("Laboratorio")]
-    public TextMeshProUGUI textoRecetaActual;
-    public TextMeshProUGUI textoProgreso;
-    public GameObject panelVictoria;
-
-    [Header("Escena Recolección")]
     public TextMeshProUGUI textoConteoIngredientes;
     public int minimoIngredientesParaAvanzar = 3;
     public GameObject botonIrLaboratorio;
 
-    // --- NUEVA VARIABLE AQUÍ ---
+    [Header("HUD - Laboratorio")]
+    public TextMeshProUGUI textoInventario;
+    public TextMeshProUGUI textoRecetaActual;
+    public TextMeshProUGUI textoProgreso;
+    public GameObject panelVictoria;
+
     [Header("Menú Principal")]
     public GameObject panelInstrucciones;
 
     void Update()
     {
+        if (GameManager.Instance == null) return;
+
         if (textoConteoIngredientes != null)
         {
             int total = GameManager.Instance.TotalIngredientes();
@@ -44,7 +43,8 @@ public class UIManager : MonoBehaviour
     {
         string txt = "Inventario:\n";
         foreach (var kvp in GameManager.Instance.inventario)
-            if (kvp.Value > 0) txt += $"  {kvp.Key}: {kvp.Value}\n";
+            if (kvp.Value > 0)
+                txt += $"  {kvp.Key}: {kvp.Value}\n";
         return txt;
     }
 
@@ -64,13 +64,11 @@ public class UIManager : MonoBehaviour
 
     public void ActualizarReceta(RecetaData receta)
     {
-        if (textoRecetaActual != null)
-        {
-            string txt = $"📜 Receta: {receta.nombre}\n";
-            foreach (var obj in receta.objetivos)
-                txt += $"  - {obj.ingrediente} x{obj.cantidad}\n";
-            textoRecetaActual.text = txt;
-        }
+        if (textoRecetaActual == null) return;
+        string txt = $"Receta: {receta.nombre}\n";
+        foreach (var obj in receta.objetivos)
+            txt += $"  - {obj.ingrediente} x{obj.cantidad}\n";
+        textoRecetaActual.text = txt;
     }
 
     public void ActualizarProgreso(Dictionary<string, int> entregados, RecetaData receta)
@@ -79,8 +77,8 @@ public class UIManager : MonoBehaviour
         string txt = "Progreso:\n";
         foreach (var obj in receta.objetivos)
         {
-            int entregado = entregados.ContainsKey(obj.ingrediente) ? entregados[obj.ingrediente] : 0;
-            txt += $"  {obj.ingrediente}: {entregado}/{obj.cantidad}\n";
+            int e = entregados.ContainsKey(obj.ingrediente) ? entregados[obj.ingrediente] : 0;
+            txt += $"  {obj.ingrediente}: {e}/{obj.cantidad}\n";
         }
         textoProgreso.text = txt;
     }
@@ -90,22 +88,36 @@ public class UIManager : MonoBehaviour
         if (panelVictoria != null) panelVictoria.SetActive(true);
     }
 
-    // --- NUEVO MÉTODO AQUÍ ---
     public void MostrarInstrucciones()
     {
         if (panelInstrucciones != null)
             panelInstrucciones.SetActive(!panelInstrucciones.activeSelf);
     }
 
-    // Botones de navegación
-    public void IrAlLaboratorio() => SceneManager.LoadScene("LAB-Scene3");
+    public void Salir()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+    }
+
+    public void IrAlLaboratorio()
+    {
+        Debug.Log("[UIManager] Yendo al laboratorio...");
+        SceneManager.LoadScene(2);
+    }
+
+    public void IrARecoleccion()
+    {
+        SceneManager.LoadScene(1);
+    }
 
     public void IrAlMenu()
     {
-        GameManager.Instance.ResetearJuego();
-        SceneManager.LoadScene("MENU-Scene1");
+        if (GameManager.Instance != null)
+            GameManager.Instance.ResetearJuego();
+        SceneManager.LoadScene(0);
     }
-
-    public void IrARecoleccion() => SceneManager.LoadScene("BOSQUE-Scene2");
-    public void Salir() => Application.Quit();
 }
