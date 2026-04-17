@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 288663478}
   - component: {fileID: 288663481}
   - component: {fileID: 288663480}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2468,6 +2468,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 560561268755342229, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
   m_PrefabInstance: {fileID: 4748429153178616350}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &910481952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4906168139722216211, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+  m_PrefabInstance: {fileID: 4748429153178616350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce56e8d2f5b3b144ebca46f875c50c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovePlayer
 --- !u!1 &965995539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,7 +4050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 560561268755342229, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.76
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 560561268755342229, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4073,6 +4084,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3902589220044114522, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902589220044114522, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902589220044114522, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 910481952}
+    - target: {fileID: 3902589220044114522, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902589220044114522, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSprint
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902589220044114522, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MovePlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902589220044114522, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4906168139722216211, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: speed
       value: 2
@@ -4083,7 +4122,15 @@ PrefabInstance:
       objectReference: {fileID: 910481949}
     - target: {fileID: 4906168139722216211, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: jumpForce
-      value: 6
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906168139722216211, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: longitudRaycast
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906168139722216211, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
+      propertyPath: capaSuelo.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4976593571297926448, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: m_Name

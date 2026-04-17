@@ -4,12 +4,21 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float jumpForce = 10f;
+    [Header("Movimiento")]
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private float sprintMultiplier = 2f; // Multiplicador para correr
+    [SerializeField] private float jumpForce = 6f;
+
+    [Header("Configuración de Suelo")]
+    [SerializeField] private float longitudRaycast = 0.5f;
+    [SerializeField] private LayerMask capaSuelo;
+
     public Animator animator;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private bool enSuelo;
+    private bool estaCorriendo; // Nueva variable para el estado de sprint
 
     private void Awake()
     {
@@ -21,33 +30,59 @@ public class MovePlayer : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
+    // --- NUEVO MÉTODO PARA SPRINT ---
+    public void OnSprint(InputAction.CallbackContext context)
+    {
+        // Se activa cuando presionas Shift y se desactiva cuando lo sueltas
+        if (context.performed) estaCorriendo = true;
+        if (context.canceled) estaCorriendo = false;
+    }
+
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && enSuelo)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
+        // 1. Detección de suelo
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, capaSuelo);
+        enSuelo = hit.collider != null;
+
+        // 2. Movimiento horizontal (Aplicando el multiplicador si corre)
+        float velocidadActual = estaCorriendo ? speed * sprintMultiplier : speed;
+        rb.linearVelocity = new Vector2(moveInput.x * velocidadActual, rb.linearVelocity.y);
 
         float velocidadX = rb.linearVelocity.x;
 
-        if (velocidadX < 0)
+        // 3. Voltear el sprite
+        if (velocidadX < -0.1f)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-
-        if (velocidadX > 0)
+        else if (velocidadX > 0.1f)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
 
+        // 4. Animaciones
         if (animator != null)
         {
+            // Enviamos la velocidad absoluta para que la animación de "movement" 
+            // sea más rápida cuando corremos
             animator.SetFloat("movement", Mathf.Abs(velocidadX));
+            animator.SetBool("ensuelo", enSuelo);
+            animator.SetBool("estaCorriendo", estaCorriendo);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * longitudRaycast);
     }
 }
