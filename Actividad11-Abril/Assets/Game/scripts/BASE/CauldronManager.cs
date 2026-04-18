@@ -8,7 +8,7 @@ public class CauldronManager : MonoBehaviour
     void Start()
     {
         ui = FindObjectOfType<UIManager>();
-        MostrarRecetaActual();
+        ui?.ActivarPanelCaldero(false); // Mantener apagado al inicio
     }
 
     void MostrarRecetaActual()
@@ -57,5 +57,26 @@ public class CauldronManager : MonoBehaviour
             MostrarRecetaActual();
         else
             ui?.MostrarVictoria();
+    }
+
+    // --- DETECCIÓN FÍSICA PARA DESPLEGAR EL PANEL ---
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Si entra el jugador al área de colisión
+        if (collision.CompareTag("Player"))
+        {
+            ui?.ActivarPanelCaldero(true); // Encender el panel
+            MostrarRecetaActual();         // Refrescar y mostrar los textos actuales
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Si el jugador se aleja del caldero
+        if (collision.CompareTag("Player"))
+        {
+            ui?.ActivarPanelCaldero(false); // Apagar el panel
+        }
     }
 }

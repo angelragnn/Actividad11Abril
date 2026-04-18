@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI textoRecetaActual;
     public TextMeshProUGUI textoProgreso;
     public GameObject panelVictoria;
+    public GameObject panelCaldero; // El panel que se abrirá al acercarse
 
     [Header("Menú Principal")]
     public GameObject panelInstrucciones;
@@ -80,6 +81,11 @@ public class UIManager : MonoBehaviour
     public void MostrarVictoria()
     {
         if (panelVictoria != null) panelVictoria.SetActive(true);
+    }
+
+    public void ActivarPanelCaldero(bool estado)
+    {
+        if (panelCaldero != null) panelCaldero.SetActive(estado);
     }
 
     public void MostrarInstrucciones()
