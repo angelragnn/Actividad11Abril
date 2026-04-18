@@ -13,7 +13,7 @@ public class GameDataLoader : MonoBehaviour
 
     IEnumerator CargarDatos()
     {
-        // ⚠ CORRECCIÓN: el archivo se llama "GameData.json", no "datos.json"
+        
         string path = Path.Combine(Application.streamingAssetsPath, "GameData.json");
 
         UnityWebRequest request = UnityWebRequest.Get(path);

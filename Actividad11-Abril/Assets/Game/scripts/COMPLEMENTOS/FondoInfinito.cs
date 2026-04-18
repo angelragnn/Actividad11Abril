@@ -24,7 +24,7 @@ public class FondoInfinito : MonoBehaviour
 
         posicionAnteriorCamara = camara.position;
 
-        // Escalar el fondo para que cubra toda la pantalla
+        
         transform.localScale = new Vector3(escala, escala, 1f);
     }
 
@@ -32,12 +32,12 @@ public class FondoInfinito : MonoBehaviour
     {
         Vector3 delta = camara.position - posicionAnteriorCamara;
 
-        // Mover el fondo siguiendo la cámara en X e Y
+        
         float moveX = delta.x * (1 - velocidadParallaxX);
         float moveY = delta.y * (1 - velocidadParallaxY);
         transform.position += new Vector3(moveX, moveY, 0);
 
-        // Mover el tiling para efecto infinito en X
+        
         Vector2 offset = material.mainTextureOffset;
         offset.x += delta.x * velocidadParallaxX * 0.1f;
         material.mainTextureOffset = offset;

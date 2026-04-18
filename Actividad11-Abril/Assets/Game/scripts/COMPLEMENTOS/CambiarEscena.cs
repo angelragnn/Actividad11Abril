@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class CambiarEscena : MonoBehaviour
 {
     public int escenaDestino = 1;
-    public int minimoIngredientes = 0; // 0 = sin requisito
+    public int minimoIngredientes = 0; 
 
     void OnTriggerEnter2D(Collider2D other)
     {

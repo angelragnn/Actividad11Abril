@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI textoRecetaActual;
     public TextMeshProUGUI textoProgreso;
     public GameObject panelVictoria;
-    public GameObject panelCaldero; // El panel que se abrirá al acercarse
+    public GameObject panelCaldero; 
 
     [Header("Menú Principal")]
     public GameObject panelInstrucciones;
