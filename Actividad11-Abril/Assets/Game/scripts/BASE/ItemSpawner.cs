@@ -22,7 +22,7 @@ public class ItemSpawner : MonoBehaviour
     {
         float timeout = 5f;
         float elapsed = 0f;
-        while (GameManager.Instance.datos == null)
+        while (GameManager.Instance == null || GameManager.Instance.datos == null)
         {
             elapsed += Time.deltaTime;
             if (elapsed > timeout)
@@ -39,20 +39,45 @@ public class ItemSpawner : MonoBehaviour
     void SpawnearIngredientes()
     {
         var ingredientes = GameManager.Instance.datos.ingredientes;
-        int cantidad = Mathf.Min(ingredientes.Count, puntosDeSpawn.Count);
 
+        
+        List<IngredienteData> listaSpawn = new List<IngredienteData>();
+
+        foreach (var receta in GameManager.Instance.datos.recetas)
+        {
+            foreach (var objetivo in receta.objetivos)
+            {
+                
+                IngredienteData data = ingredientes.Find(i => i.nombre == objetivo.ingrediente);
+                if (data == null) continue;
+
+                
+                for (int c = 0; c < objetivo.cantidad; c++)
+                    listaSpawn.Add(data);
+            }
+        }
+
+        
+        while (listaSpawn.Count < puntosDeSpawn.Count)
+        {
+            listaSpawn.Add(ingredientes[Random.Range(0, ingredientes.Count)]);
+        }
+
+        
         List<Transform> puntosAleatorios = new List<Transform>(puntosDeSpawn);
         for (int i = 0; i < puntosAleatorios.Count; i++)
         {
             int j = Random.Range(i, puntosAleatorios.Count);
-            (puntosAleatorios[i], puntosAleatorios[j]) =
-            (puntosAleatorios[j], puntosAleatorios[i]);
+            (puntosAleatorios[i], puntosAleatorios[j]) = (puntosAleatorios[j], puntosAleatorios[i]);
         }
+
+        int cantidad = Mathf.Min(listaSpawn.Count, puntosAleatorios.Count);
 
         for (int i = 0; i < cantidad; i++)
         {
-            IngredienteData data = ingredientes[i];
-            Sprite sprite = ObtenerSprite(data.iconoId, i);
+            IngredienteData data = listaSpawn[i];
+            int indice = ingredientes.IndexOf(data);
+            Sprite sprite = ObtenerSprite(data.iconoId, indice);
 
             GameObject obj = Instantiate(
                 ingredientePrefab,
@@ -67,7 +92,6 @@ public class ItemSpawner : MonoBehaviour
         Debug.Log($"[Spawner] Se generaron {cantidad} ingredientes.");
     }
 
-   
     Sprite ObtenerSprite(string iconoId, int indice)
     {
         Sprite s = Resources.Load<Sprite>("Sprites/" + iconoId);

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4921d135b5a118e4f82dbcdca48549cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntradaLaboratorio
-  minimoIngredientes: 3
+  minimoIngredientes: 6
   escenaDestino: 2
 --- !u!61 &40364866
 BoxCollider2D:
@@ -2177,7 +2177,38 @@ Transform:
   m_GameObject: {fileID: 468399586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.22, y: 11.309999, z: 0}
+  m_LocalPosition: {x: 60.28, y: 16.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1310292018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &551976732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 551976733}
+  m_Layer: 0
+  m_Name: Spwan1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &551976733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551976732}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.89, y: 15.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2685,7 +2716,7 @@ Transform:
   m_GameObject: {fileID: 860801678}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 73.229996, y: 9.43, z: 0}
+  m_LocalPosition: {x: 60.7, y: 15.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2737,7 +2768,7 @@ Transform:
   m_GameObject: {fileID: 965995539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.29, y: 0.28999996, z: 0}
+  m_LocalPosition: {x: 59.3, y: 15.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2768,7 +2799,7 @@ Transform:
   m_GameObject: {fileID: 1020183371}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.24, y: 4.46, z: 0}
+  m_LocalPosition: {x: 58.32, y: 16.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3329,6 +3360,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 965995540}
+  - {fileID: 551976733}
+  - {fileID: 1768404682}
   - {fileID: 1020183372}
   - {fileID: 860801679}
   - {fileID: 468399587}
@@ -4119,11 +4152,15 @@ MonoBehaviour:
   - {fileID: 21300134, guid: bb76618f4bae74c83b9d6654d0b2a47e, type: 3}
   - {fileID: -3443555461527096104, guid: be1a5bd13766ec048bab6f4c578baa0f, type: 3}
   - {fileID: 21300200, guid: bb76618f4bae74c83b9d6654d0b2a47e, type: 3}
+  - {fileID: 21300232, guid: bb76618f4bae74c83b9d6654d0b2a47e, type: 3}
+  - {fileID: 21300200, guid: bb76618f4bae74c83b9d6654d0b2a47e, type: 3}
   puntosDeSpawn:
   - {fileID: 965995540}
   - {fileID: 1020183372}
   - {fileID: 860801679}
   - {fileID: 468399587}
+  - {fileID: 551976733}
+  - {fileID: 1768404682}
 --- !u!1 &1485500604
 GameObject:
   m_ObjectHideFlags: 0
@@ -4155,11 +4192,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   textoMensaje: {fileID: 1174708374}
   textoConteoIngredientes: {fileID: 1426597104}
-  minimoIngredientesParaAvanzar: 3
+  minimoIngredientesParaAvanzar: 6
   textoInventario: {fileID: 0}
   textoRecetaActual: {fileID: 0}
   textoProgreso: {fileID: 0}
   panelVictoria: {fileID: 0}
+  panelCaldero: {fileID: 0}
   panelInstrucciones: {fileID: 0}
 --- !u!4 &1485500606
 Transform:
@@ -4357,6 +4395,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756503377}
   m_CullTransparentMesh: 1
+--- !u!1 &1768404681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1768404682}
+  m_Layer: 0
+  m_Name: Spwan1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1768404682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768404681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.03, y: 15.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1310292018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2094779158
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,11 +4723,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 560561268755342229, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.68
+      value: 63.55
       objectReference: {fileID: 0}
     - target: {fileID: 560561268755342229, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.45
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: 560561268755342229, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
       propertyPath: m_LocalPosition.z
