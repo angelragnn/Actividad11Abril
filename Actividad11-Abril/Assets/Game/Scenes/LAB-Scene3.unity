@@ -4511,8 +4511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FondoInfinito
   camara: {fileID: 2094779161}
-  velocidadParallaxX: 0
-  velocidadParallaxY: 0
+  velocidadParallaxX: 1
+  velocidadParallaxY: 1
   escala: 5.4
 --- !u!1 &607755066
 GameObject:
@@ -4970,11 +4970,6 @@ Transform:
 --- !u!95 &910481949 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3633833933725661414, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
-  m_PrefabInstance: {fileID: 4748429153178616350}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &910481951 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 560561268755342229, guid: 5d0af08db314f8b40997ca139553c2fb, type: 3}
   m_PrefabInstance: {fileID: 4748429153178616350}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &910481952 stripped
@@ -6148,7 +6143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363ac8ec3dab46a47a4b35d51bcc3cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 910481951}
+  target: {fileID: 594375346}
   smoothSpeed: 5
   offset: {x: 0, y: 0, z: -10}
 --- !u!114 &2094779163
