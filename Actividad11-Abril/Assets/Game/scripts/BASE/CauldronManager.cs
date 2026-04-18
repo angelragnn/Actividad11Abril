@@ -15,7 +15,11 @@ public class CauldronManager : MonoBehaviour
     {
         var receta = RecipeManager.Instance.ObtenerRecetaActual();
         if (receta != null && ui != null)
+        {
             ui.ActualizarReceta(receta);
+            // También mostramos el progreso inicial (en ceros o lo que lleve)
+            ui.ActualizarProgreso(RecipeManager.Instance.GetEntregados(), receta);
+        }
     }
 
     // Llamar desde un botón de UI o zona de entrega pasando el nombre del ingrediente
