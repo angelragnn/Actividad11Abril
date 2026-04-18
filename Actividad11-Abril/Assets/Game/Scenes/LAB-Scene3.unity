@@ -591,6 +591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5122383441347547054, guid: 8a0e7d10a45805a4299c1e255dba0316, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8017063620752776923, guid: 8a0e7d10a45805a4299c1e255dba0316, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -620,6 +624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199709680}
+  - component: {fileID: 1199709681}
   m_Layer: 0
   m_Name: ---RecipeManager---
   m_TagString: Untagged
@@ -642,6 +647,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1199709681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199709679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456613d50d6fa0746a92c66766a97684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeManager
 --- !u!1 &1375023853
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1375023854}
+  - component: {fileID: 1375023855}
   m_Layer: 0
   m_Name: ---CauldronManager---
   m_TagString: Untagged
@@ -673,6 +691,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1375023855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375023853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa37d13d22632de4baf3671fb07a3c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CauldronManager
 --- !u!1 &1423927126
 GameObject:
   m_ObjectHideFlags: 0
